@@ -43,6 +43,7 @@ Find the file `index.js` and complete the tasks.
 Edit the `ReadMe` file with your answers.
 
 1. In your own words, define closure (1-2 sentences).
+answer:  closure means closing ability for functions to use variables.
 2. Study the following code, then answer the questions below.
 
 ```js
@@ -64,8 +65,11 @@ dansRoll();
 ```
 
 a. Where is closure used in this code? How can you tell?
+answer: closure is used in personalDice and i can tell because personalDice returns a function.
 b. Compare and contrast calling `dansRoll` the first and second time. What is always the same? What could change?
+answer: The name is always the same and the value of the roll always changes.
 c. What is the lexical scope of `newRoll`? 
+answer: newRoll is scoped within the code codeblock when each variable set equal to personalDice(<someCode>) In this case newRoll.
 
 
 ### Task 3 - Stretch Goals
@@ -77,12 +81,19 @@ See if you can complete one or more of the following challenges:
 1. Write a function that would allow you to do this using a closure. (This is another interview question we've seen before - when you're ready for answers, view an explanation [here](https://www.coderbyte.com/algorithm/3-common-javascript-closure-questions)).
 
 ```js
+function createBase(a) {
+   return function(b) {
+     return a + b;
+   }
+ }
 var addSix = createBase(6);
 addSix(10); // returns 16
 addSix(21); // returns 27
 ```
 
 2. Research the differences between functional programming and object oriented programming. Then, describe the pros and cons of functional programming vs object-oriented programming. This is a common interview question and great practice!
+  1. object-Oriented languages are good there are fixed set of operations on things. A the code evolves a primarily add new things. It can be accomplished by adding new classes which implement existing methods, and the existing classes are left alone.
+  2. Functional languages are good when there is a fixed set of things, and as your code evolves, you primarily add new operations on existing things. It can be accomplished by adding new functions which compute with existing data types, and the existing functions are left alone.
 
 ## Resources
 
